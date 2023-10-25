@@ -44,3 +44,6 @@ announcer.reload:
   description: Allows to reload plugin config
   default: op
 ```
+
+## Links
+* [Spigot Plugin page](https://www.spigotmc.org/resources/ultimate-announcer.113231/)
