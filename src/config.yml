@@ -1,0 +1,90 @@
+# Ultimate Announcer plugin
+# Current version: 1.0.0
+# Author: DrachenClon22
+
+# Language of all messages that will be displayed.
+# Supported languages: en, ru.
+language: en
+# Pause between messages, in seconds
+# To disable just use 0
+pause-between: 5
+# To show events in random order or as declared below
+shuffle-order: false
+
+# All events goes below
+# If the event doesn't show up in the game, it means you haven't declared the event correctly
+# To declare event use example below:
+#
+#   your_custom_unique_name_event:
+#       title: This string will be shown in bar to players
+#       date: 10.10.2030
+#       time: 7
+#
+# Name of event (your_custom_unique_name_event in example) should always be different and not repeated!
+# title - what will be shown in bar
+# date - when event will occur, in format dd.mm.yyyy, where any of date could be X, means event is repeated
+# e.g. 23.10.X or 23.X.2024
+# time - how long this will be shown in bar title (in seconds)
+#
+# Allowed macros:
+# {hours} - total remaining hours
+# {days} - total remaining days
+# {month} - total remaining months
+# {year} - total remaining years
+# {month:days} - remaining days in months; e.g. 63 days is 2 months and 1 day, 1 is the result
+# {days:hours} - remaining hours in days; see example above
+# {hours:minutes} - remaining minutes in hours; see example above
+#
+# Language option used to show correct message, unfortunately doesn't work good
+# for languages with multiple plural forms, like Russian language
+# {minute:s} - shows "minute" or "minuteS" depending on remaining minutes
+# {hour:s} - same, see above
+# {day:s} - same, see above
+# {month:s} - same, see above
+# {year:s} - same, see above
+# {month:day:s} - same, see above
+# {days:hour:s} - same, see above
+# {hours:minute:s} - same, see above
+events:
+    this:
+        title: "This is coming in &6{days} &r{day:s}"
+        date: 31.12.X
+        time: 7
+    something:
+        title: "&cSomething &ris coming in &6{month} &r{month:s} and &6{month:days} &r{month:day:s}"
+        date: 23.12.2024
+        time: 5
+    repeated:
+        title: "This event will be in &6{days} &r{day:s}"
+        date: 24.X.X
+        time: 6
+        
+# Languages. If you want to add your own languages, just add it here in config file as shown below.
+lang:
+    en:
+        minute: "minute"
+        minutes: "minutes"
+        hour: "hour"
+        hours: "hours"
+        day: "day"
+        days: "days"
+        month: "month"
+        months: "months"
+        year: "year"
+        years: "years"
+        message-reloaded: "&6Plugin reloaded"
+        no-permission: "&cYou don't have access to this command"
+    ru:
+        minute: "минуту"
+        minutes: "минут"
+        hour: "час"
+        hours: "часов"
+        day: "день"
+        days: "дней"
+        month: "месяц"
+        months: "месяцев"
+        year: "год"
+        years: "лет"
+        message-reloaded: "&cУ вас нет прав на выполнение этой команды."
+        
+        

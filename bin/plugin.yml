@@ -1,0 +1,19 @@
+name: UltimateAnnouncer
+version: 1.0.0
+author: DrachenClon22
+main: com.drachenclon.announcer.AnnouncerCore
+
+commands:
+  announcer:
+    usage: /<command>
+    permission: announcer.reload
+    
+permissions:
+  announcer.*:
+    description: Allows to use all announcer commands
+    default: op
+    children:
+      announcer.reload: true
+  announcer.reload:
+    description: Allows to reload plugin config
+    default: op
